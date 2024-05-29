@@ -1,0 +1,3 @@
+add_executable(PhilipsVolumeReaderTest PhilipsVolumeReaderTest.cpp)
+target_link_libraries(PhilipsVolumeReaderTest PUBLIC vtkPhilipsVolumeReader)
+target_include_directories(PhilipsVolumeReaderTest PUBLIC "${PROJECT_SOURCE_DIR}/PhilipsVolumeReader")
