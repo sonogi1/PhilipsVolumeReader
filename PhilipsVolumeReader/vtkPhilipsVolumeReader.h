@@ -3,10 +3,11 @@
 #include <vtkImageReader2.h>
 #include <gdcmReader.h>
 #include <gdcmDataSet.h>
+#include "vtkPhilipsVolumeReader_export.h"
 
 class vtkImageData;
 
-class vtkPhilipsVolumeReader : public vtkImageReader2
+class VTKPHILIPSVOLUMEREADER_EXPORT vtkPhilipsVolumeReader : public vtkImageReader2
 {
   vtkPhilipsVolumeReader(vtkPhilipsVolumeReader  const&) = delete;
   vtkPhilipsVolumeReader  operator=(vtkPhilipsVolumeReader  const&) = delete;

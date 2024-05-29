@@ -5,7 +5,8 @@
 # Add source to this project's executable.
 add_library (vtkPhilipsVolumeReader SHARED "vtkPhilipsVolumeReader.cpp" "vtkPhilipsVolumeReader.h")
 target_link_libraries(vtkPhilipsVolumeReader PUBLIC ${VTK_LIBRARIES} ${GDCM_LIBRARIES})
-
+target_include_directories(vtkPhilipsVolumeReader PUBLIC "${PROJECT_BINARY_DIR}/PhilipsVolumeReader")
+generate_export_header(vtkPhilipsVolumeReader)
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET vtkPhilipsVolumeReader PROPERTY CXX_STANDARD 20)
 endif()
